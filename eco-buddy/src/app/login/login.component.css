@@ -1,33 +1,112 @@
+/* Login Container Styling */
 .login-container {
-  width: 300px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
+  border: 1px solid #4CAF50; /* Eco-friendly green */
+  border-radius: 8px;
+  background-color: #f1f8e9; /* Light eco-green background */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
 }
 
-.login-container h2 {
+h2 {
   text-align: center;
+  color: #388e3c; /* Darker green for the header */
+  margin-bottom: 20px;
+  font-size: 24px;
 }
 
-.login-container form {
+/* Form Styling */
+form {
   display: flex;
   flex-direction: column;
+  gap: 15px;
 }
 
-.login-container input {
-  margin-bottom: 10px;
+/* Input Styling */
+input {
+  width: 100%;
   padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #388e3c; /* Green border for eco-theme */
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #e8f5e9; /* Light green input background */
 }
 
-.login-container button {
-  padding: 10px;
-  background-color: #4CAF50;
+/* Label Styling */
+label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #388e3c; /* Green labels */
+}
+
+/* Submit Button Styling */
+button {
+  padding: 12px;
+  background-color: #4CAF50; /* Eco-friendly green button */
   color: white;
   border: none;
+  border-radius: 4px;
   cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background-color 0.3s;
 }
 
-.login-container p {
+button:hover {
+  background-color: #45a049; /* Slightly darker green for hover effect */
+}
+
+/* Link Styling */
+p {
   text-align: center;
+  font-size: 14px;
+}
+
+p a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+/* Eco Message */
+.eco-message {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #dcedc8; /* Light green background for eco message */
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.eco-message p {
+  color: #388e3c; /* Green message text */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .login-container {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  input, button {
+    font-size: 14px;
+  }
+
+  .eco-message {
+    font-size: 12px;
+  }
 }
