@@ -1,0 +1,61 @@
+/* Overall container for the homepage */
+.homepage-container {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Container for form and map */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Form styling */
+.input-container {
+  margin: 20px 0;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 12px 24px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:disabled {
+  background-color: #ccc;
+}
+
+/* Map styling */
+#map {
+  height: 400px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Route details styling */
+#routeDetails {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+#routeDetails p {
+  font-size: 16px;
+}

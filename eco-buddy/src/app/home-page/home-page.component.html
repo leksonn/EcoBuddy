@@ -1,0 +1,61 @@
+<div class="homepage-container">
+  <h1>Welcome to EcoBuddy!</h1>
+  <p>Find the most eco-friendly route to your destination.</p>
+
+  <div class="container">
+    <h2>Where would you like to go?</h2>
+
+    <div class="input-container">
+      <form (ngSubmit)="calculateRoute()" #routeForm="ngForm">
+        <div class="input-group">
+          <label for="fromLocation">From:</label>
+          <input
+            type="text"
+            id="fromLocation"
+            [(ngModel)]="fromLocation"
+            name="fromLocation"
+            placeholder="Enter your location"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="toLocation">To:</label>
+          <input
+            type="text"
+            id="toLocation"
+            [(ngModel)]="toLocation"
+            name="toLocation"
+            placeholder="Enter destination"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="travelMode">Choose your travel mode:</label>
+          <select id="travelMode" [(ngModel)]="travelMode" name="travelMode" required>
+            <option value="DRIVING">Driving</option>
+            <option value="WALKING">Walking</option>
+            <option value="BICYCLING">Bicycling</option>
+            <option value="TRANSIT">Public Transit</option>
+          </select>
+        </div>
+
+        <button type="submit" [disabled]="!routeForm.valid">Get Route</button>
+      </form>
+    </div>
+
+    <div id="map"></div>
+
+    <!-- Route details section -->
+    <div id="routeDetails">
+      <ul *ngIf="routes.length > 0">
+        <li *ngFor="let route of routes">
+          <strong>Option {{ route.index }}:</strong>
+          Distance: {{ route.distance }},
+          Time: {{ route.duration }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
