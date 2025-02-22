@@ -47,15 +47,15 @@
 
     <div id="map"></div>
 
-    <!-- Route details section -->
-    <div id="routeDetails">
-      <ul *ngIf="routes.length > 0">
-        <li *ngFor="let route of routes">
-          <strong>Option {{ route.index }}:</strong>
-          Distance: {{ route.distance }},
-          Time: {{ route.duration }}
-        </li>
-      </ul>
-    </div>
+
+
+    <!-- List of routes -->
+    <ul *ngIf="routes.length > 0">
+      <li *ngFor="let route of routes; let i = index">
+        <p>Route {{ i + 1 }}:</p>
+        <p>{{ route.legs[0].distance.text }} - {{ route.legs[0].duration.text }}</p>
+        <p>CO2 Emissions: {{ calculateCO2Emissions(route.legs[0].distance.value / 1000) | number: '1.0-2' }} kg</p>
+      </li>
+    </ul>
   </div>
 </div>
